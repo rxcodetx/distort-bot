@@ -4,7 +4,8 @@ import os
 import cv2
 from distorted import distort_face
 
-BOT_TOKEN = "TU_TOKEN_AQUI"  # Reemplaza esto con tu token
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("👋 Envíame una foto y te devolveré una versión caricaturizada.")
